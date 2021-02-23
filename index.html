@@ -18,9 +18,6 @@
         <!-- Chart.js -->
         <script src="https://cdn.jsdelivr.net/npm/chart.js@2.9.4/dist/Chart.min.js"></script>
 
-        <!-- Anime.js -->
-        <script src="anime-master/lib/anime.min.js"></script>
-
         <title>Garry's Portfolio</title>
     </head>
     <body>
@@ -94,11 +91,28 @@
             </div>
         </div>
 
+        <div class="musicBar container">
+            <div class="row">
+                <div class="col text-center">
+                    <h1>Interested in something I love?</h1>
+                    <p>Check out this fun little OST from Minecraft, one of the most nostalgic memories I have of a very fun childhood game.</p>
+                    <canvas class="w-50" id="progress" height="10"></canvas>
+                    <audio id="audio" ontimeupdate="updateBar()" src="assets/yt1s.com - C418 Sweden Minecraft Volume Alpha.mp3"></audio>
+                    <br>
+                    <span style="margin-bottom: 10px;" id="current-time"></span>
+                    /
+                    <span id="duration"></span>
+                    <br>
+                    <button style="margin-top: 10px;" class="btn btn-light w-50" id="audioControl" onclick="togglePlaying()">Play</button>
+                </div>
+            </div>
+        </div>
+
         <!-- Optional JavaScript; choose one of the two! -->
         <script src="js/main.js"></script>
         <script src="js/navigation.js"></script>
         <script src="js/chart1.js"></script>
-        <script src="js/anime.js"></script>
+        <script src="js/music.js"></script>
         <!-- Option 1: Bootstrap Bundle with Popper -->
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js" integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0" crossorigin="anonymous"></script>
     </body>
